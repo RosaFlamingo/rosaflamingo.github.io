@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flora the Flamingo by Rosa Featherstone</title>
+<meta name="description" content="Flora and the Christmas Sock: a warm, funny rhyming Christmas picture book for ages 3 to 7 by Rosa Featherstone. Kindle out now.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IM+Fell+English:ital@0;1&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+/* Layout: a bedtime-story night. Navy sky hero with falling snow, cream pages below, alternating picture and text rows, one big verse, activity cards, format cards, series shelf, a gift-box band, FAQ, one closing action. Gold is used on buttons and stars only. */
+:root{
+  --night:#26345A; --night-deep:#1B2545; --cream:#FBF6EC; --paper:#FFFDF7; --pink:#F2A5BE; --pink-soft:#F8ECEC;
+  --berry:#9B3A57; --berry-deep:#8A3550; --gold:#C9A54E; --gold-hover:#B8933C; --green:#4E7A5E; --ink:#3A2E36; --muted:#6B5F66; --line:#E8DCC3; --rose:#9B3A57; --rose-hover:#7E2E47;
+  --display:"Cormorant Garamond",Georgia,"Times New Roman",serif; --body:"Lora",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);font-size:18px;line-height:1.65}
+img,svg{max-width:100%}
+img{height:auto}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0}
+a{color:var(--berry-deep)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1140px;margin:0 auto;padding:0 20px}
+.sec{padding:96px 0}
+@media (max-width:720px){.sec{padding:64px 0}}
+.kicker{display:inline-flex;align-items:center;gap:10px;font:700 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--berry-deep)}
+.kicker::before{content:"";width:26px;height:2px;border-radius:2px;background:currentColor}
+.on-dark .kicker{color:var(--pink)}
+.h2{font-size:clamp(34px,5vw,54px);margin-top:14px;color:var(--night)}
+.on-dark .h2{color:var(--cream)}
+.lede{font-size:clamp(18px,2vw,21px);color:var(--muted);max-width:34em;margin-top:16px}
+.on-dark .lede{color:#D9DEEE}
+.ico{width:24px;height:24px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:14px 26px;border-radius:999px;font:700 17px/1.1 var(--body);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .2s ease,box-shadow .2s ease,background .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px -12px rgba(27,37,69,.55)}
+.btn-buy{background:var(--gold);color:var(--night-deep)}
+.btn-buy:hover{background:var(--gold-hover)}
+.btn-line{background:transparent;color:var(--night);border-color:var(--night)}
+.on-dark .btn-line{color:var(--cream);border-color:rgba(255,248,239,.7)}
+
+/* header that shrinks */
+.top{position:sticky;top:0;z-index:50;background:rgba(27,37,69,.96);backdrop-filter:blur(8px);color:var(--cream);transition:padding .25s ease,box-shadow .25s ease}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:16px;padding-bottom:16px;transition:padding .25s ease}
+.top.small .wrap{padding-top:8px;padding-bottom:8px}
+.top.small{box-shadow:0 8px 24px -16px rgba(0,0,0,.6)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--cream)}
+.brand b{font:600 22px/1 var(--display)}
+.brand small{display:block;font-size:13px;color:var(--pink);margin-top:3px}
+.top nav{display:flex;gap:22px;align-items:center}
+.top nav a.l{color:#D9DEEE;text-decoration:none;font-size:16px}
+.top nav a.l:hover{color:var(--cream)}
+.top .btn{min-height:44px;padding:10px 20px;font-size:15px}
+@media (max-width:860px){.top nav{display:none}}
+.brand b{white-space:nowrap}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:radial-gradient(1200px 600px at 75% 10%,#33467A 0%,var(--night) 45%,var(--night-deep) 100%);color:var(--cream)}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding-top:72px;padding-bottom:0}
+.hero h1{font-size:clamp(44px,7vw,80px);margin-top:18px;color:var(--cream)}
+.hero h1 span{color:var(--pink)}
+.hero .lede{color:#D9DEEE}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.hero .note{margin-top:18px;font-size:15px;color:#B9C2DD}
+.hero-art{align-self:end}
+.hero-art svg{display:block;width:100%;height:auto}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr;padding-top:48px}.hero-art{max-width:520px;margin:0 auto}}
+.snow{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+.snow i{position:absolute;top:-12px;width:7px;height:7px;border-radius:50%;background:#fff;opacity:.75;animation:fall linear infinite}
+@keyframes fall{to{transform:translate3d(30px,110vh,0)}}
+@media (prefers-reduced-motion:reduce){.snow{display:none}.fade{opacity:1!important;transform:none!important}}
+
+/* badges */
+.badges{background:var(--paper);border-bottom:1px solid var(--line)}
+.badges .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;padding-top:30px;padding-bottom:30px}
+.badge{display:flex;gap:12px;align-items:flex-start}
+.badge .dot{width:46px;height:46px;border-radius:14px;background:var(--pink-soft);color:var(--berry-deep);display:grid;place-items:center;flex:none}
+.badge b{display:block;font:600 18px/1.2 var(--display);color:var(--night)}
+.badge span{font-size:15px;color:var(--muted)}
+@media (max-width:860px){.badges .wrap{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.badges .wrap{grid-template-columns:1fr}}
+
+/* alternating rows */
+.row{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.row + .row{margin-top:88px}
+.row.flip .row-art{order:2}
+@media (max-width:860px){.row{grid-template-columns:1fr;gap:28px}.row.flip .row-art{order:0}.row + .row{margin-top:64px}}
+.row-art{border-radius:28px;overflow:hidden;box-shadow:0 30px 60px -36px rgba(27,37,69,.6)}
+.row-art svg{display:block;width:100%;height:auto}
+.row h3{font-size:clamp(28px,3.6vw,38px);color:var(--night);margin-top:12px}
+.row p{margin-top:14px;color:var(--muted)}
+.ticks{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:10px}
+.ticks li{display:flex;gap:10px;align-items:flex-start}
+.ticks .ico{color:var(--green);margin-top:3px}
+
+/* big verse */
+.verse{background:var(--night);color:var(--cream);text-align:center;position:relative;overflow:hidden}
+.verse blockquote{margin:0 auto;max-width:820px;font:600 clamp(28px,4.4vw,46px)/1.25 var(--display)}
+.verse blockquote span{color:var(--pink)}
+.verse cite{display:block;margin-top:22px;font:400 16px var(--body);font-style:normal;color:#B9C2DD}
+
+/* activity cards */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px}
+@media (max-width:960px){.grid4{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.grid4{grid-template-columns:1fr}}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:12px}
+.card .dot{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;background:var(--pink-soft);color:var(--berry-deep)}
+.card h3{font-size:22px;color:var(--night)}
+.card p{font-size:16px;color:var(--muted)}
+
+/* formats */
+.formats{background:var(--paper)}
+.fmt{position:relative}
+.fmt .price{font:700 30px/1 var(--display);color:var(--night)}
+.pill{display:inline-flex;align-self:flex-start;align-items:center;gap:6px;font:700 12px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;padding:7px 11px;border-radius:999px}
+.pill.now{background:#DDF0E5;color:var(--green)}
+.pill.soon{background:#EEE9F6;color:#5B4B86}
+.fmt .btn{margin-top:auto}
+.fmt.feature{border:2px solid var(--gold);box-shadow:0 24px 44px -30px rgba(27,37,69,.55)}
+.fmt .spacer{margin-top:auto;font-size:14px;color:var(--muted)}
+
+/* series shelf */
+.shelf{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+@media (max-width:860px){.shelf{grid-template-columns:1fr}}
+.book{border-radius:22px;overflow:hidden;background:var(--paper);border:1px solid var(--line);display:flex;flex-direction:column}
+.book .spine{height:170px;display:grid;place-items:center;position:relative}
+.book .spine b{font:600 26px/1.1 var(--display);color:#fff;text-align:center;padding:0 20px;position:relative}
+.b1 .spine{background:linear-gradient(160deg,#33467A,var(--night-deep))}
+.b2 .spine{background:linear-gradient(160deg,#9FD3B5,#F7D98B)}
+.b2 .spine b{color:var(--night)}
+.b3 .spine{background:repeating-linear-gradient(135deg,#FCE4EE 0 18px,#FFF8EF 18px 36px)}
+.b3 .spine b{color:var(--berry-deep)}
+.book .body{padding:22px 24px 26px;display:flex;flex-direction:column;gap:10px;flex:1}
+.book h3{font-size:22px;color:var(--night)}
+.book p{font-size:16px;color:var(--muted)}
+
+/* collection */
+.collection{background:linear-gradient(180deg,var(--night) 0%,var(--night-deep) 100%);color:var(--cream)}
+.collection .row-art{box-shadow:none;border-radius:0;overflow:visible}
+.collection .ticks .ico{color:var(--pink)}
+.collection .row p,.collection .ticks{color:#D9DEEE}
+.collection .row h3{color:var(--cream)}
+.collection .price-big{font:700 clamp(44px,6vw,64px)/1 var(--display);color:var(--gold);margin-top:18px}
+
+/* faq */
+.faq{max-width:820px;margin:40px auto 0}
+.faq details{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:0 22px;margin-bottom:12px}
+.faq summary{list-style:none;cursor:pointer;padding:20px 0;font:600 19px/1.3 var(--display);color:var(--night);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:26px;line-height:1;color:var(--berry)}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 0 20px;color:var(--muted)}
+
+/* about */
+.about{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;max-width:860px;margin:0 auto}
+.about .mark{width:120px;height:120px;border-radius:50%;background:var(--pink-soft);display:grid;place-items:center}
+@media (max-width:600px){.about{grid-template-columns:1fr;text-align:center}.about .mark{margin:0 auto}}
+
+/* closing */
+.close{text-align:center;background:radial-gradient(900px 400px at 50% 0%,#33467A,var(--night-deep));color:var(--cream);position:relative;overflow:hidden}
+.close .h2{color:var(--cream)}
+.close .lede{margin-left:auto;margin-right:auto;color:#D9DEEE}
+.close .btn{margin-top:30px}
+
+footer{background:var(--night-deep);color:#9EA8C6;font-size:14px;padding:28px 0 100px}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media (min-width:861px){footer{padding-bottom:28px}}
+
+/* phone buy bar */
+.buybar{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--night-deep);color:var(--cream);display:none;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));box-shadow:0 -10px 30px -16px rgba(0,0,0,.6)}
+.buybar b{font:600 17px/1.2 var(--display)}
+.buybar span{display:block;font-size:13px;color:#B9C2DD}
+.buybar .btn{min-height:46px;padding:10px 20px;font-size:16px}
+@media (max-width:860px){.buybar{display:flex}}
+
+
+
+.cover{display:block;width:100%;max-width:440px;margin:0 auto;border-radius:6px 14px 14px 6px;box-shadow:-10px 0 0 -4px rgba(0,0,0,.18) inset,0 40px 70px -30px rgba(0,0,0,.7),0 10px 24px -12px rgba(0,0,0,.5);transform:rotate(-2deg)}
+.hero-art{align-self:center;padding:10px 0 64px}
+.row-art img{display:block;width:100%;height:auto}
+.peek{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+@media (max-width:860px){.peek{grid-template-columns:1fr 1fr}}
+.peek figure{margin:0;border-radius:20px;overflow:hidden;background:var(--paper);border:1px solid var(--line)}
+.peek img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.peek figcaption{padding:12px 14px;font-size:15px;color:var(--muted)}
+.book .spine.img{height:auto;display:block;padding:0;background:none}
+.book .spine.img img{display:block;width:100%;aspect-ratio:1;object-fit:cover}
+.easter{background:linear-gradient(180deg,#FFF6E3,#FDE9F1)}
+.easter .row-art{transform:rotate(1.5deg)}
+.duo{position:relative;width:100%;max-width:480px;margin:0 auto;aspect-ratio:1.15}
+.duo img{position:absolute;width:60%;border-radius:6px 12px 12px 6px;box-shadow:0 30px 50px -24px rgba(0,0,0,.7)}
+.duo img:first-child{left:0;top:14%;transform:rotate(-6deg)}
+.duo img:nth-of-type(2){right:0;top:0;transform:rotate(5deg)}
+.collection .duo img{position:absolute;width:58%;height:auto}
+.collection .duo img:first-child{left:2%;top:16%;transform:rotate(-7deg)}
+.collection .duo img:nth-of-type(2){left:auto;right:2%;top:2%;transform:rotate(5deg)}
+.duo .more{position:absolute;right:6%;bottom:2%;background:var(--gold);color:var(--night-deep);font:600 16px/1.2 var(--display);padding:10px 16px;border-radius:999px;transform:rotate(-3deg)}
+
+/* free days banner, only shows 1 to 6 December */
+.promo{display:none;background:var(--gold);color:var(--night-deep);text-align:center;font-weight:700;font-size:16px;line-height:1.4}
+.promo.on{display:block}
+.promo .wrap{padding-top:12px;padding-bottom:12px;display:flex;flex-wrap:wrap;gap:6px 14px;justify-content:center;align-items:center}
+.promo a{color:var(--night-deep);font-weight:700}
+.promo .tag{background:var(--night-deep);color:var(--gold);border-radius:999px;padding:4px 12px;font:600 15px/1.2 var(--display)}
+
+
+/* ---- classy book styling: cream paper, serif type, rose and gold like the printed pages ---- */
+body{font-size:18px;line-height:1.75;letter-spacing:.005em}
+h1,h2,h3{font-weight:600;letter-spacing:0;line-height:1.1}
+.h2{font-size:clamp(38px,5.2vw,58px)}
+.hero h1{font-size:clamp(48px,7.4vw,86px);font-weight:600}
+.hero h1 span{font-style:italic;color:var(--pink)}
+.kicker{font:600 13px/1 var(--body);letter-spacing:.22em;color:var(--rose);gap:12px}
+.kicker::before{content:"★";width:auto;height:auto;background:none;color:var(--gold);font-size:12px;letter-spacing:0}
+.on-dark .kicker{color:var(--pink)}
+.orn{display:flex;align-items:center;gap:14px;color:var(--gold);font-size:13px;margin:18px 0 0}
+.orn::before,.orn::after{content:"";width:46px;height:1px;background:var(--gold);opacity:.8}
+.center .orn{justify-content:center}
+.btn{font:600 16px/1.1 var(--body);letter-spacing:.02em;border-radius:999px}
+.btn-buy{background:var(--rose);color:#FFF8EF}
+.btn-buy:hover{background:var(--rose-hover)}
+.on-dark .btn-buy,.hero .btn-buy,.close .btn-buy,.buybar .btn-buy{background:var(--gold);color:var(--night-deep)}
+.on-dark .btn-buy:hover,.hero .btn-buy:hover,.close .btn-buy:hover,.buybar .btn-buy:hover{background:#E0C47A}
+.btn-line{color:var(--rose);border-color:var(--rose);border-width:1.5px}
+.brand b{font:600 italic 24px/1 var(--display);letter-spacing:.01em}
+.brand small{font-family:var(--body)}
+.badges{background:var(--paper)}
+.badge .dot,.card .dot{background:transparent;border:1px solid var(--gold);color:var(--rose);border-radius:50%}
+.badge b{font:600 21px/1.2 var(--display)}
+.card{border-radius:14px;border-color:var(--line);background:var(--paper);box-shadow:0 1px 0 rgba(201,165,78,.15)}
+.card h3{font-size:25px}
+.row h3{font-size:clamp(32px,3.8vw,42px)}
+.verse blockquote{font:500 italic clamp(30px,4.6vw,50px)/1.3 var(--display)}
+.verse blockquote span{font-style:italic}
+.fmt .price,.collection .price-big{font-family:var(--display);font-weight:700}
+.fmt.feature{border:1.5px solid var(--gold)}
+.pill{font:600 11px/1 var(--body);letter-spacing:.14em;border-radius:999px}
+.pill.now{background:#E8F0E8;color:#3F6B4F}
+.pill.soon{background:#F3ECE0;color:#7A5E2E}
+.book{border-radius:14px}
+.book h3{font-size:25px}
+.faq details{border-radius:12px}
+.faq summary{font:600 21px/1.3 var(--display)}
+.faq summary::after{color:var(--gold)}
+.peek figure{border-radius:12px}
+.peek figcaption{font-style:italic;font-family:var(--body)}
+.row-art{border-radius:14px}
+.about .mark{background:var(--paper);border:1px solid var(--gold)}
+.promo .tag{font:600 15px/1.2 var(--body)}
+.soonnote{margin-top:auto;font-size:14px;font-style:italic;color:var(--muted)}
+
+
+/* light, book-style header */
+.top{background:rgba(251,246,236,.97);color:var(--ink);border-bottom:1px solid var(--line)}
+.top::after{content:"";position:absolute;left:50%;bottom:-7px;transform:translateX(-50%);color:var(--gold);font-size:12px;line-height:1;background:var(--cream);padding:0 10px}
+.top.small{box-shadow:0 10px 28px -20px rgba(58,46,54,.45)}
+.brand{color:var(--ink);gap:14px}
+.brand svg{width:40px;height:50px;flex:none}
+.brand b{display:block;font:600 34px/1 var(--display);color:var(--night);letter-spacing:.01em;font-style:normal;transition:font-size .25s ease}
+.top.small .brand b{font-size:28px}
+.brand small{display:block;margin-top:5px;font:italic 15px/1 var(--body);color:var(--rose)}
+.top nav a.l{color:var(--ink)}
+.top nav a.l:hover{color:var(--rose)}
+.top .btn-buy{background:var(--rose);color:#FFF8EF}
+.top .btn-buy:hover{background:var(--rose-hover)}
+@media (max-width:520px){.brand b{font-size:28px}.top.small .brand b{font-size:24px}.brand svg{width:32px;height:40px}}
+
+
+/* header brand, styled like the book covers */
+.brand .face{width:58px;height:58px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--gold);box-shadow:0 0 0 3px var(--cream),0 0 0 4px rgba(201,165,78,.45);transition:width .25s ease,height .25s ease}
+.top.small .brand .face{width:46px;height:46px}
+.brand .name{display:block;font:600 34px/1 var(--display);letter-spacing:.06em;color:#7A3646;transition:font-size .25s ease}
+.top.small .brand .name{font-size:28px}
+.brand .tag{display:flex;align-items:center;gap:8px;margin-top:6px;font:italic 15px/1 var(--body);color:var(--night)}
+.brand .tag::before,.brand .tag::after{content:"★";font-style:normal;font-size:10px;color:var(--gold)}
+@media (max-width:520px){.brand .name{font-size:27px;letter-spacing:.04em}.top.small .brand .name{font-size:24px}.brand .face{width:48px;height:48px}.brand .tag{font-size:13px}}
+
+
+/* header brand v3: series name in storybook lettering, author line in rose */
+.brand .series{display:block;font:400 36px/1 "IM Fell English",var(--display);color:var(--night);letter-spacing:.005em;white-space:nowrap;transition:font-size .25s ease}
+.top.small .brand .series{font-size:30px}
+.brand .by{display:flex;align-items:center;gap:10px;margin-top:6px;font:600 26px/1 var(--display);letter-spacing:.08em;color:#7A3646}
+.brand .by::before{content:"";width:22px;height:1px;background:var(--gold)}
+.brand .by::after{content:"★";font-size:10px;color:var(--gold);letter-spacing:0}
+.brand .face{width:62px;height:62px}
+.brand .face.arch{width:52px;height:80px;border-radius:26px 26px 10px 10px;object-fit:cover}
+.top.small .brand .face.arch{width:42px;height:64px}
+@media (max-width:520px){.brand .face.arch{width:42px;height:64px}}
+@media (max-width:520px){.brand .series{font-size:24px}.top.small .brand .series{font-size:21px}.brand .by{font-size:19px;letter-spacing:.05em}.brand .face{width:50px;height:50px}}
+
+/* three formats sit in a row of three */
+.formats .grid4{grid-template-columns:repeat(3,1fr)}
+@media (max-width:860px){.formats .grid4{grid-template-columns:1fr;max-width:520px}}
+
+.fade{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.fade.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5A2.5 2.5 0 0 0 6.5 23H20v-5"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-child" viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"/><path d="M12 8v7M8 11h8M9 22l3-7 3 7"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></symbol>
+  <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v9H5v-9"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></symbol>
+  <symbol id="i-tablet" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-sock" viewBox="0 0 24 24"><path d="M9 2h7v11l3 3a3.5 3.5 0 0 1-5 5l-5-5z"/><path d="M9 6h7M9 10h7"/></symbol>
+  <symbol id="flamingo" viewBox="0 0 120 150"><path d="M58,112 L60,146 M66,112 L80,130 L70,134" fill="none" stroke="#E9799E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><ellipse cx="60" cy="98" rx="34" ry="20" fill="#F48FB1"/><path d="M34,96 Q56,80 80,94 Q60,110 34,100 Z" fill="#EE7AA3"/><path d="M84,90 C110,66 64,40 86,18" fill="none" stroke="#F48FB1" stroke-width="10" stroke-linecap="round"/><circle cx="89" cy="14" r="12" fill="#F48FB1"/><circle cx="91" cy="11" r="2.4" fill="#2B2235"/><path d="M98,10 Q114,12 112,26 Q106,20 98,18 Z" fill="#FFF4E6"/><path d="M109,18 Q113,22 112,26 Q108,23 105,20 Z" fill="#2B2235"/></symbol>
+</svg>
+
+<div class="promo" id="promo" role="region" aria-label="Free Kindle offer">
+  <div class="wrap">
+    <span class="tag">FREE on Kindle</span>
+    <span>Flora is free on Kindle until 8am on Sunday 6 December. <a data-link="kindle" href="#">Grab your copy</a></span>
+    <span>Loved it? The paperback makes a lovely gift for under the tree. <a data-link="paperback" href="#">See the paperback</a></span>
+  </div>
+</div>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="brand" href="#start" aria-label="Rosa Featherstone, Flora the Flamingo stories, home">
+      <img class="face arch" src="img/flora-sock.jpg" width="280" height="428" alt="">
+      <span><span class="series">Flora the Flamingo Stories</span><span class="by">by Rosa Featherstone</span></span>
+    </a>
+    <nav aria-label="Main">
+      <a class="l" href="#story">The story</a>
+      <a class="l" href="#inside">Inside</a>
+      <a class="l" href="#series">The series</a>
+      <a class="l" href="#easter">Easter</a>
+      <a class="l" href="#collection">Gift box</a>
+      <a class="btn btn-buy" data-link="kindle" href="#">Buy on Kindle</a>
+    </nav>
+  </div>
+</header>
+
+<main id="start">
+<section class="hero on-dark" aria-labelledby="hero-title">
+  <div class="snow" id="snow" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="fade" style="padding-bottom:40px">
+      <span class="kicker">Book 1 · A Flora the Flamingo story</span>
+      <h1 id="hero-title">Flora and the <span>Christmas Sock</span></h1>
+      <p class="lede">A warm, funny rhyming picture book about a little flamingo who stays by the sea for her very first Christmas. Made for reading aloud, for ages 3 to 7.</p>
+      <div class="ctas">
+        <a class="btn btn-buy" data-link="kindle" href="#">Get the Kindle book · £3.99</a>
+        <a class="btn btn-line" href="#buy">See every format</a>
+      </div>
+      <p class="note">Also in paperback (£8.99) and as a gift hardback (£16.99).</p>
+    </div>
+    <div class="hero-art fade"><img class="cover" src="img/xmas-cover.jpg" width="1000" height="1000" alt="Cover of Flora and the Christmas Sock: Flora the flamingo in a stripy sock on a snowy harbour with a robin, a seal and a crab"></div>
+  </div>
+</section>
+
+<section class="badges" aria-label="Book highlights">
+  <div class="wrap">
+    <div class="badge fade"><span class="dot"><svg class="ico"><use href="#i-music"/></svg></span><p><b>Rhymes on every page</b><span>Bouncy verse that's fun to read aloud</span></p></div>
+    <div class="badge fade"><span class="dot"><svg class="ico"><use href="#i-child"/></svg></span><p><b>Ages 3 to 7</b><span>Perfect for bedtime all through December</span></p></div>
+    <div class="badge fade"><span class="dot"><svg class="ico"><use href="#i-pencil"/></svg></span><p><b>Activity pages</b><span>Colour, spot, draw and dream</span></p></div>
+    <div class="badge fade"><span class="dot"><svg class="ico"><use href="#i-gift"/></svg></span><p><b>A lovely little gift</b><span>Made for stockings and story time</span></p></div>
+  </div>
+</section>
+
+<section class="sec" id="story" aria-labelledby="story-title">
+  <div class="wrap">
+    <div class="row fade">
+      <div class="row-art"><img src="img/xmas-sunset.jpg" width="1100" height="1100" alt="Flora on the snowy beach at sunset with Robin, Seal and Crab as her flock flies away"></div>
+      <div>
+        <span class="kicker">The story</span>
+        <h2 class="h2" id="story-title">Flamingos aren't built for the cold</h2>
+        <p class="lede">Flora the flamingo has never seen Christmas. So when her flock flies off to the sunshine, she stays behind on her little snowy beach.</p>
+        <p>There's just one problem. Brrrr! Her long skinny legs are turning blue, and Flora has never owned a single sock. Luckily, she has three very good friends.</p>
+      </div>
+    </div>
+
+    <div class="row flip fade">
+      <div class="row-art"><img src="img/xmas-knitting.jpg" width="1100" height="1100" alt="Robin, Seal and Crab knitting a long pink and white stripy sock through the night"></div>
+      <div>
+        <span class="kicker">Friendship and kindness</span>
+        <h3>A robin, a seal and a crab with a plan</h3>
+        <p>Flora's friends huddle up and work through the night to make her something special. Then, on Christmas Day, Flora finds a way to give something back to the whole town.</p>
+        <ul class="ticks">
+          <li><svg class="ico"><use href="#i-check"/></svg>A gentle story about friendship, kindness and finding where you belong</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>A funny twist at the end that makes everyone smile</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Set by the seaside, with twinkling lights along the prom</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec verse on-dark" aria-label="A peek at page one">
+  <div class="wrap fade">
+    <span class="kicker">A peek at page one</span>
+    <blockquote style="margin-top:22px">“Down by the sea, where the seagulls all call, lived <span>Flora the flamingo</span>, the pinkest of all.”</blockquote>
+    <cite>Flora and the Christmas Sock, page 1</cite>
+  </div>
+</section>
+
+
+<section class="sec" aria-labelledby="peek-title" style="padding-bottom:0">
+  <div class="wrap">
+    <div class="fade">
+      <span class="kicker">Peek inside</span>
+      <h2 class="h2" id="peek-title">Snowy harbours and twinkling lights</h2>
+      <p class="lede">Every page is a cosy seaside Christmas scene, full of little details to spot together.</p>
+    </div>
+    <div class="peek">
+      <figure class="fade"><img src="img/xmas-lights.jpg" width="900" height="900" alt="Flora shivering under the Christmas lights on the prom"><figcaption>Brrrr! The coldest flamingo in town</figcaption></figure>
+      <figure class="fade"><img src="img/xmas-tree.jpg" width="900" height="900" alt="Robin holding a little stocking up to Flora by the Christmas tree"><figcaption>"Have you hung up your stocking?"</figcaption></figure>
+      <figure class="fade"><img src="img/xmas-sock.jpg" width="900" height="900" alt="A long stripy sock hanging on the pier for Flora on Christmas morning"><figcaption>A sock long enough to reach past her knees</figcaption></figure>
+      <figure class="fade"><img src="img/xmas-hug.jpg" width="900" height="900" alt="Flora hugging her friends beside the town Christmas tree"><figcaption>A big hug for three very good friends</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="inside" aria-labelledby="inside-title">
+  <div class="wrap">
+    <div class="fade center" style="text-align:center">
+      <span class="kicker">The fun doesn't stop at The End</span>
+      <h2 class="h2" id="inside-title">Activity pages at the back</h2>
+      <p class="lede" style="margin-left:auto;margin-right:auto">Keep the story going after bedtime with pages to colour, spot and dream on.</p>
+    </div>
+    <div class="grid4">
+      <article class="card fade"><span class="dot"><svg class="ico"><use href="#i-star"/></svg></span><h3>Did you know?</h3><p>Real flamingo facts, like why they stand on one leg and how they turn pink.</p></article>
+      <article class="card fade"><span class="dot"><svg class="ico"><use href="#i-sock"/></svg></span><h3>Design a sock</h3><p>Stripes, spots, stars or snowflakes? Make a sock as wonderful as Flora's.</p></article>
+      <article class="card fade"><span class="dot"><svg class="ico"><use href="#i-search"/></svg></span><h3>A seaside picture hunt</h3><p>Look back through the pictures and spot a robin, a golden star, a harbour boat and more.</p></article>
+      <article class="card fade"><span class="dot"><svg class="ico"><use href="#i-heart"/></svg></span><h3>A Christmas wish</h3><p>What would you give Flora for Christmas? Draw your gift or write your wish.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec formats" id="buy" aria-labelledby="buy-title">
+  <div class="wrap">
+    <div class="fade">
+      <span class="kicker">Get your copy</span>
+      <h2 class="h2" id="buy-title">Choose your Flora</h2>
+    </div>
+    <div class="grid4">
+      <article class="card fmt feature fade">
+        <span class="pill now">Out now</span>
+        <span class="dot"><svg class="ico"><use href="#i-tablet"/></svg></span>
+        <h3>Kindle ebook</h3>
+        <p class="price">£3.99</p>
+        <p>Read it on a Kindle, tablet or phone. Best in colour on a tablet.</p>
+        <a class="btn btn-buy" data-link="kindle" href="#">Buy on Amazon</a>
+      </article>
+      <article class="card fmt fade">
+        <span class="pill soon">Coming soon</span>
+        <span class="dot"><svg class="ico"><use href="#i-book"/></svg></span>
+        <h3>Paperback</h3>
+        <p class="price">£8.99</p>
+        <p>A square 8.5 inch colour picture book. Just right for a stocking.</p>
+        <a class="btn btn-buy" data-link="paperback" data-soon="On Amazon very soon" href="#">Buy on Amazon</a>
+      </article>
+      <article class="card fmt fade">
+        <span class="pill soon">Coming soon</span>
+        <span class="dot"><svg class="ico"><use href="#i-gift"/></svg></span>
+        <h3>Gift hardback</h3>
+        <p class="price">£16.99</p>
+        <p>A sturdy hardback to keep and read again every December. Printed to order and posted to you.</p>
+        <a class="btn btn-buy" data-link="hardback" data-soon="Coming very soon" href="#">Buy the hardback</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="series" aria-labelledby="series-title">
+  <div class="wrap">
+    <div class="fade">
+      <span class="kicker">The Flora the Flamingo series</span>
+      <h2 class="h2" id="series-title">One Flora story for every big moment</h2>
+      <p class="lede">Same Flora, same seaside friends, a new adventure for each special time of year.</p>
+    </div>
+    <div class="shelf">
+      <article class="book b1 fade">
+        <div class="spine img"><img src="img/xmas-cover.jpg" width="1000" height="1000" alt="Flora and the Christmas Sock cover"></div>
+        <div class="body"><span class="pill now">Book 1 · Out now</span><h3>Christmas</h3><p>Flora's very first Christmas by the sea, and the sock that changed everything.</p><a class="btn btn-buy" data-link="kindle" href="#" style="margin-top:auto;align-self:flex-start">Buy on Kindle</a></div>
+      </article>
+      <article class="book b2 fade">
+        <div class="spine img"><img src="img/easter-cover.jpg" width="900" height="900" alt="Flora and the Easter Bunny cover"></div>
+        <div class="body"><span class="pill soon">Book 2 · 1 March 2027</span><h3>Easter</h3><p>A little hop. A big splash. An Easter to remember. Kindle pre-orders open soon.</p><a class="btn btn-line" href="#easter" style="margin-top:auto;align-self:flex-start">Find out more</a></div>
+      </article>
+      <article class="book b3 fade">
+        <div class="spine"><b>More Flora on the way</b></div>
+        <div class="body"><span class="pill soon">Books 3 to 5</span><h3>New adventures</h3><p>More stories for the year's best days are being written now.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec easter" id="easter" aria-labelledby="easter-title">
+  <div class="wrap">
+    <div class="row flip fade">
+      <div class="row-art"><img src="img/easter-basket.jpg" width="900" height="900" alt="Flora splashing in a rock pool on a sunny spring beach while Bunny, Seal, Robin and Crab watch the egg basket"></div>
+      <div>
+        <span class="kicker">Coming 1 March 2027 · Book 2</span>
+        <h2 class="h2" id="easter-title">Flora and the Easter Bunny</h2>
+        <p class="lede">A little hop. A big splash. An Easter to remember.</p>
+        <p>Flora wants to help the Easter Bunny. But hopping is harder than it looks! When a gust of wind sends his basket sailing away, can one long-legged flamingo save the day?</p>
+        <ul class="ticks">
+          <li><svg class="ico"><use href="#i-check"/></svg>Same Flora, same seaside friends, now with spring flowers and Easter eggs</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>A warm, funny rhyming adventure by the sea</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Out four weeks before Easter Sunday, in time for Easter baskets</li>
+        </ul>
+        <p style="margin-top:20px;font-weight:700;color:var(--night)">Kindle pre-orders open soon.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec collection on-dark" id="collection" aria-labelledby="col-title">
+  <div class="wrap">
+    <div class="row fade">
+      <div class="row-art" aria-hidden="true"><div class="duo"><img src="img/xmas-cover.jpg" alt=""><img src="img/easter-cover.jpg" alt=""><span class="more">+ more to come</span></div></div>
+      <div>
+        <span class="kicker">The perfect gift</span>
+        <h3 class="h2" id="col-title">The Flora Collection</h3>
+        <p>Four or five Flora stories together in one gift box, ready to wrap.</p>
+        <ul class="ticks">
+          <li><svg class="ico"><use href="#i-check"/></svg>The whole Flora series in one keepsake set</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>A gift for birthdays, new babies and Christmas mornings</li>
+          <li><svg class="ico"><use href="#i-check"/></svg>Boxed up and ready to wrap, no gift bag needed</li>
+        </ul>
+        <p class="price-big">£40</p>
+        <p style="margin-top:8px">Coming in 2027, once the series is complete.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="fade center" style="text-align:center">
+      <span class="kicker">Good to know</span>
+      <h2 class="h2" id="faq-title">Questions grown-ups ask</h2>
+    </div>
+    <div class="faq fade">
+      <details><summary>What age is it for?</summary><p>Ages 3 to 7. Younger ones love the rhymes and pictures, and early readers can join in with the words.</p></details>
+      <details><summary>Can I read the Kindle book without a Kindle?</summary><p>Yes. The free Kindle app works on phones and tablets. A tablet shows the pictures best.</p></details>
+      <details><summary>Is there a paperback?</summary><p>Yes, on Amazon at £8.99, and there's a gift hardback at £16.99, printed to order.</p></details>
+      <details><summary>Are there more Flora books?</summary><p>Yes. Flora and the Easter Bunny arrives on 1 March 2027, with more seaside adventures after that.</p></details>
+      <details><summary>Is it only for Christmas Day?</summary><p>It's made for reading aloud all through December, from the first lights going up to Christmas Eve.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec" style="padding-top:0" aria-labelledby="about-title">
+  <div class="wrap">
+    <div class="about fade">
+      <div class="mark" aria-hidden="true" style="overflow:hidden"><img src="img/flora-face.jpg" width="240" height="240" alt="" style="width:100%;height:100%;object-fit:cover"></div>
+      <div>
+        <span class="kicker">The author</span>
+        <h2 class="h2" id="about-title" style="font-size:clamp(28px,4vw,40px)">Rosa Featherstone</h2>
+        <p class="lede">Rosa Featherstone lives by the Yorkshire coast, where sea breezes, winter walks and a love of flamingos inspire her stories. She writes about kindness, belonging and the little things that make life magical.</p><p style="margin-top:12px;font-style:italic;color:var(--berry-deep)">Pink feathers. Shoreline pebbles. A little storytelling magic.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec close on-dark" aria-labelledby="close-title">
+  <div class="snow" id="snow2" aria-hidden="true"></div>
+  <div class="wrap fade" style="position:relative">
+    <h2 class="h2" id="close-title">Bring Flora home for Christmas</h2>
+    <p class="lede">Start reading tonight on Kindle for £3.99.</p>
+    <a class="btn btn-buy" data-link="kindle" href="#">Get Flora on Kindle</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Rosa Featherstone. Flora the Flamingo books.</span>
+    <a href="#start" style="color:#C9D0E6">Back to top</a>
+  </div>
+</footer>
+
+<div class="buybar" role="region" aria-label="Buy Flora">
+  <div><b>Flora and the Christmas Sock</b><span>Kindle £3.99</span></div>
+  <a class="btn btn-buy" data-link="kindle" href="#">Buy now</a>
+</div>
+
+<script>
+/* Change a link here and every button that uses it updates. */
+const LINKS = {
+  kindle: "https://www.amazon.co.uk/dp/B0H27JZTH5",
+  paperback: "https://www.amazon.co.uk/dp/B0HRZWGT5P",
+  hardback: "https://www.lulu.com/shop/rosa-featherstone/flora-and-the-christmas-sock/hardcover/product-q64g2qm.html"
+};
+/* Free days: 8am UK 1 Dec to 8am UK 6 Dec 2026 (Amazon runs them on US Pacific time).
+   Add #free-preview to the page link to see the banner early. */
+const FREE_START = Date.UTC(2026, 11, 1, 8, 0), FREE_END = Date.UTC(2026, 11, 6, 8, 0);
+const freeNow = (Date.now() >= FREE_START && Date.now() < FREE_END) || location.hash === "#free-preview";
+if (freeNow){
+  document.getElementById("promo").classList.add("on");
+  document.querySelectorAll('[data-link="kindle"]').forEach(a => {
+    if (a.classList.contains("btn")) a.textContent = a.closest(".buybar") ? "Get it free" : "Get Flora free on Kindle";
+  });
+  document.querySelectorAll(".fmt.feature .price, .buybar span").forEach(el => { el.textContent = el.tagName === "SPAN" ? "Free on Kindle until 6 Dec" : "FREE"; });
+}
+document.querySelectorAll("[data-link]").forEach(a => {
+  const u = LINKS[a.dataset.link];
+  if (u) { a.href = u; a.target = "_blank"; a.rel = "noopener"; return; }
+  const note = document.createElement("p"); note.className = "soonnote"; note.textContent = a.dataset.soon || "Coming soon";
+  if (a.classList.contains("btn")) a.replaceWith(note); else { const box = a.closest("span"); if (box) box.remove(); }
+});
+document.querySelectorAll(".fmt").forEach(c => { const live = c.querySelector("a.btn"); const pill = c.querySelector(".pill");
+  if (pill && live) { pill.className = "pill now"; pill.textContent = "Out now"; } });
+
+const hdr = document.getElementById("top");
+const onScroll = () => hdr.classList.toggle("small", window.scrollY > 40);
+window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+
+function snow(id, n){ const el = document.getElementById(id); if (!el) return;
+  for (let i = 0; i < n; i++){ const s = document.createElement("i"); const size = 3 + Math.random()*5;
+    s.style.left = Math.random()*100 + "%"; s.style.width = s.style.height = size + "px";
+    s.style.animationDuration = (8 + Math.random()*10) + "s"; s.style.animationDelay = (-Math.random()*18) + "s"; s.style.opacity = .4 + Math.random()*.5; el.appendChild(s); } }
+snow("snow", 40); snow("snow2", 24);
+
+const items = document.querySelectorAll(".fade");
+if ("IntersectionObserver" in window){
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 });
+  items.forEach(el => io.observe(el));
+} else { items.forEach(el => el.classList.add("in")); }
+</script>
+</body>
+</html>
