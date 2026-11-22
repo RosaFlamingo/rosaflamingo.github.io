@@ -29,6 +29,7 @@ a{color:var(--berry-deep)}
 @media (max-width:720px){.sec{padding:64px 0}}
 .kicker{display:inline-flex;align-items:center;gap:10px;font:700 13px/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--berry-deep)}
 .kicker::before{content:"★"}
+.kicker.both::after{content:"★";color:var(--gold);font-size:12px;letter-spacing:0}
 .on-dark .kicker{color:var(--pink)}
 .h2{font-size:clamp(34px,5vw,54px);margin-top:14px;color:var(--night)}
 .on-dark .h2{color:var(--cream)}
@@ -366,7 +367,7 @@ h1,h2,h3{font-weight:600;letter-spacing:0;line-height:1.1}
   <div class="snow" id="snow" aria-hidden="true"></div>
   <div class="wrap">
     <div class="fade" style="padding-bottom:40px">
-      <span class="kicker">A Flora the Flamingo story</span>
+      <span class="kicker both">A Flora the Flamingo story</span>
       <h1 id="hero-title">Flora and the <span>Christmas Sock</span></h1>
       <p class="lede">A warm, funny rhyming picture book about a little flamingo who stays by the sea for her very first Christmas. Made for reading aloud.</p>
       <div class="trio " role="group" aria-label="Buy Flora and the Christmas Sock"><a class="btn btn-buy" data-link="kindle" href="#"><span class="fmt-name">Kindle</span> <span class="fmt-price">£3.99</span></a><a class="btn btn-line" data-link="paperback" href="#"><span class="fmt-name">Paperback</span> <span class="fmt-price">£8.99</span></a><a class="btn btn-line" data-link="hardback" href="#"><span class="fmt-name">Hardback</span> <span class="fmt-price">£16.99</span></a></div>
